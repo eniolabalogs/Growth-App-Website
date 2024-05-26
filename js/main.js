@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
         const otherGroups=faqContainer.querySelectorAll(".faq-group");
 
         otherGroups.forEach((otherGroup) => {
-            if (otherGroup !=group){ 
-                const otherGroupBody= otherGroup.querySelector("faq-group-body");
+            if (otherGroup !==group){ 
+                const otherGroupBody = otherGroup.querySelector(".faq-group-body");
                 const otherIcon = otherGroup.querySelector(".faq-group-header i");
 
                 otherGroupBody.classList.remove("open");
@@ -33,3 +33,13 @@ document.addEventListener("DOMContentLoaded", ()=> {
         });
     });
 });
+
+// Mobile Menu
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerButton = document.querySelector('.hamburger-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+  
+    hamburgerButton.addEventListener('click', () =>
+      mobileMenu.classList.toggle('active')
+    );
+  });
